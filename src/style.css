@@ -1,7 +1,62 @@
 @import "tailwindcss";
 
-@theme {
+@custom-variant dark (&:where(.dark, .dark *));
+
+/*
+ * Tokens semânticos com dois temas (alto contraste, referência unkey.com):
+ * - dark: fundo #040406, texto #fff (~20:1), muted #9194a1 (>=4.5:1)
+ * - light: fundo #fff, texto #040406 (~20:1), muted #464853 (>=7:1 AAA)
+ * A navbar usa tokens invertidos (bar/barfg) nos dois modos.
+ */
+:root {
+  --c-bg: #ffffff;
+  --c-surface: #f4f5f7;
+  --c-surface-2: #eeeff1;
+  --c-border: #c7c9d1;
+  --c-border-strong: #9194a1;
+  --c-fg: #040406;
+  --c-muted: #464853;
+  --c-faint: #60606c;
+  --c-accent: #2d46c5;
+  --c-bar-bg: #040406;
+  --c-bar-fg: #ffffff;
+  --c-bar-muted: #c7c9d1;
+}
+
+.dark {
+  --c-bg: #040406;
+  --c-surface: #1c1d22;
+  --c-surface-2: #121317;
+  --c-border: #2e3038;
+  --c-border-strong: #464853;
+  --c-fg: #ffffff;
+  --c-muted: #9194a1;
+  --c-faint: #777a88;
+  --c-accent: #3756f3;
+  --c-bar-bg: #ffffff;
+  --c-bar-fg: #040406;
+  --c-bar-muted: #464853;
+}
+
+@theme inline {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Figtree", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --color-bg: var(--c-bg);
+  --color-surface: var(--c-surface);
+  --color-surface2: var(--c-surface-2);
+  --color-border: var(--c-border);
+  --color-borderstrong: var(--c-border-strong);
+  --color-fg: var(--c-fg);
+  --color-muted: var(--c-muted);
+  --color-faint: var(--c-faint);
+  --color-accent: var(--c-accent);
+  --color-bar: var(--c-bar-bg);
+  --color-barfg: var(--c-bar-fg);
+  --color-barmuted: var(--c-bar-muted);
+
+  --radius-md: 0.375rem;
 }
 
 html {
@@ -11,13 +66,28 @@ html {
 body {
   margin: 0;
   font-family: var(--font-sans);
-  background: #09090b; /* zinc-950 */
-  color: #fafafa;
+  background: var(--c-bg);
+  color: var(--c-fg);
   -webkit-font-smoothing: antialiased;
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
 
 ::selection {
-  background: rgba(59, 130, 246, 0.35);
+  background: color-mix(in srgb, var(--c-accent) 35%, transparent);
+}
+
+/* Textura de ruído (feTurbulence) — sem assets */
+.noise {
+  position: relative;
+}
+
+.noise::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
 /* Reveal on scroll */
@@ -32,20 +102,42 @@ body {
   transform: translateY(0);
 }
 
-/* Focus accessibility */
+/* Foco acessível nos dois temas */
 a:focus-visible,
 button:focus-visible {
-  outline: 2px solid #3b82f6;
+  outline: 2px solid var(--c-accent);
   outline-offset: 3px;
-  border-radius: 6px;
+  border-radius: 4px;
 }
 
-/* Slide-over mobile nav */
+/* Slide-over mobile */
 #mobile-nav {
   transform: translateX(100%);
   transition: transform 0.32s cubic-bezier(0.32, 0.72, 0, 1);
 }
 
 #mobile-nav.open {
+  transform: translateX(0);
+}
+
+/* Pilha de palavras mono do hero */
+.hero-row {
+  transition: opacity 0.35s ease, color 0.35s ease;
+}
+
+.hero-row .hero-arrow {
+  opacity: 0;
+  transform: translateX(-6px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+  color: var(--c-accent);
+}
+
+.hero-row.is-active {
+  color: var(--c-fg);
+  opacity: 1;
+}
+
+.hero-row.is-active .hero-arrow {
+  opacity: 1;
   transform: translateX(0);
 }

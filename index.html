@@ -6,10 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Alfa Produções — Transformamos ideias em impacto digital</title>
     <meta name="description" content="Produção audiovisual, branding, redes sociais e sites. Alfa Produções: da ideia ao impacto digital." />
+    <script>
+      // Evita flash de tema errado: aplica a classe antes do primeiro paint.
+      (function () {
+        var stored = localStorage.getItem('alfa-theme')
+        var dark =
+          stored === 'dark' ||
+          (stored !== 'light' && !window.matchMedia('(prefers-color-scheme: light)').matches)
+        if (dark) document.documentElement.classList.add('dark')
+      })()
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Figtree:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
   </head>
