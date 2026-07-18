@@ -1,6 +1,8 @@
 # alfa_tailwind
 
-Static Unkey-structure landing page built with **HTML + CSS + Tailwind** (Vite for build/dev only). No backend.
+Landing page institucional da **Alfa Produções** com estética Unkey (zinc-950, acento azul), construída com **HTML + CSS + Tailwind** (Vite apenas para build/dev). Sem backend.
+
+5 seções: Navbar (toggle PT/EN no globo), Hero, Bento Grid, Portfólio, Footer. Bilíngue PT-BR/EN.
 
 ## Develop
 
