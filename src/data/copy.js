@@ -1,4 +1,4 @@
-/** Bilingual copy — Alfa Produções (Unkey-style dark UI). */
+/** Copy bilíngue — Alfa Produções (linguagem visual unkey.com). */
 export const copy = {
   pt: {
     langLabel: 'PT',
@@ -10,7 +10,9 @@ export const copy = {
       { label: 'Mentorias', href: '#mentorias' },
     ],
     cta: 'Fazer Briefing',
+    themeToggle: 'Alternar tema claro/escuro',
     hero: {
+      words: ['AUDIOVISUAL', 'BRANDING', 'SOCIAL', 'SITES', 'MENTORIA'],
       titleBefore: 'Transformamos ideias em ',
       titleHighlight: 'impacto digital',
       titleAfter: '.',
@@ -25,20 +27,24 @@ export const copy = {
       lead: 'Quatro frentes integradas para tirar seu projeto do papel com consistência visual e resultado.',
       cards: {
         audiovisual: {
-          title: 'Produção Audiovisual & Storytelling',
+          label: 'Produção Audiovisual',
+          strong: 'Histórias que prendem.',
           body: 'Vídeos institucionais, campanhas e cobertura de eventos com roteiro estratégico e olhar cinematográfico.',
         },
         branding: {
-          title: 'Branding & Design Visual',
-          body: 'Identidade visual completa: logo, paleta, tipografia e diretrizes para uma marca coerente em todos os canais.',
+          label: 'Branding & Design',
+          strong: 'Marca coerente em todo canal.',
+          body: 'Identidade visual completa: logo, paleta, tipografia e diretrizes de uso.',
         },
         social: {
-          title: 'Gestão de Redes Sociais & Tráfego',
+          label: 'Social & Tráfego',
+          strong: 'Visível desde o dia um.',
           body: 'Planejamento, conteúdo e mídia paga com análise contínua de engajamento e conversão.',
         },
         sites: {
-          title: 'Criação de Sites & Mentorias Corporativas',
-          body: 'Sites rápidos e responsivos, e mentorias práticas para equipes que querem dominar conteúdo e posicionamento digital.',
+          label: 'Sites & Mentorias',
+          strong: 'Do site à equipe treinada.',
+          body: 'Sites rápidos e responsivos, e mentorias práticas para dominar conteúdo e posicionamento digital.',
         },
       },
     },
@@ -67,7 +73,9 @@ export const copy = {
       { label: 'Mentorships', href: '#mentorias' },
     ],
     cta: 'Start a Briefing',
+    themeToggle: 'Toggle light/dark theme',
     hero: {
+      words: ['VIDEO', 'BRANDING', 'SOCIAL', 'WEBSITES', 'MENTORSHIP'],
       titleBefore: 'We turn ideas into ',
       titleHighlight: 'digital impact',
       titleAfter: '.',
@@ -82,20 +90,24 @@ export const copy = {
       lead: 'Four integrated fronts to bring your project to life with visual consistency and results.',
       cards: {
         audiovisual: {
-          title: 'Video Production & Storytelling',
+          label: 'Video Production',
+          strong: 'Stories that hold attention.',
           body: 'Institutional videos, campaigns, and event coverage with strategic scripts and a cinematic eye.',
         },
         branding: {
-          title: 'Branding & Visual Design',
-          body: 'Complete visual identity: logo, palette, typography, and guidelines for a coherent brand across channels.',
+          label: 'Branding & Design',
+          strong: 'A coherent brand on every channel.',
+          body: 'Complete visual identity: logo, palette, typography, and usage guidelines.',
         },
         social: {
-          title: 'Social Media & Paid Traffic',
+          label: 'Social & Paid Traffic',
+          strong: 'Visible from day one.',
           body: 'Planning, content, and paid media with continuous engagement and conversion analysis.',
         },
         sites: {
-          title: 'Websites & Corporate Mentorships',
-          body: 'Fast, responsive websites — and hands-on mentorships for teams mastering content and digital positioning.',
+          label: 'Websites & Mentorships',
+          strong: 'From website to trained team.',
+          body: 'Fast, responsive websites — and hands-on mentorships to master content and digital positioning.',
         },
       },
     },
