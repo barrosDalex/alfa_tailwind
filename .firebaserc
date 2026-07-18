@@ -1,0 +1,12 @@
+{
+  "projects": {
+    "default": "alfa-landing-lab"
+  },
+  "targets": {
+    "alfa-landing-lab": {
+      "hosting": {
+        "tailwind": ["alfa-tailwind"]
+      }
+    }
+  }
+}
