@@ -1,8 +1,8 @@
 # alfa_tailwind
 
-Public sandbox for a responsive landing page built with **Vite + Tailwind CSS**.
+Static Unkey-structure landing page built with **HTML + CSS + Tailwind** (Vite for build/dev only). No backend.
 
-## Run locally
+## Develop
 
 ```bash
 npm install
@@ -13,5 +13,22 @@ npm run dev
 
 ```bash
 npm run build
-npm run preview
 ```
+
+Output: `dist/`
+
+## Deploy (Firebase Hosting)
+
+Secrets live **outside** this repo: `~/dev/github/.secrets/alfa-firebase.env`  
+Never commit `.env` files.
+
+```bash
+npm run build
+firebase deploy --only hosting:tailwind
+```
+
+Public URL: https://alfa-tailwind.web.app
+
+## Branch
+
+Work on `dev`. Small commits per section.
