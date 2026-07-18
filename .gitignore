@@ -22,3 +22,11 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Env / secrets — never commit
+.env
+.env.*
+!.env.example
+*.pem
+*-firebase-adminsdk*.json
+.firebase/
