@@ -1,173 +1,128 @@
-/** Shared landing copy — Unkey homepage structure (base clone, no real assets). */
+/** Bilingual copy — Alfa Produções (Unkey-style dark UI). */
 export const copy = {
-  brand: 'Alfa',
-  nav: [
-    { label: 'Product', href: '#control-plane' },
-    { label: 'Deploy', href: '#build-deploy' },
-    { label: 'Gateway', href: '#gateway' },
-    { label: 'Docs', href: '#observe' },
-  ],
-  hero: {
-    title: 'The Developer Platform for Modern APIs',
-    subtitle:
-      'Unifies your infrastructure. Deploy APIs instantly, route traffic through global gateways, and understand usage in one place.',
-    primaryCta: 'Start for free',
-    secondaryCta: 'View on GitHub',
-  },
-  controlPlane: {
-    id: 'control-plane',
-    title: 'Unify your fragmented API stack with a single control plane for access and traffic.',
-    lead:
-      'Stop assembling your API stack piece by piece. Running APIs at scale usually means juggling hosting, gateways, rate limits, and monitoring across multiple vendors.',
-    cards: [
-      {
-        title: 'Branch Overview',
-        body: 'Faster to ship. Go from code to running API in minutes. Test safely, promote when ready, roll back if needed.',
-      },
-      {
-        title: 'Manage API Keys',
-        body: 'Safer by default. Protect every endpoint with keys, rate limits, and instant access revocation out of the box.',
-      },
-      {
-        title: 'Control Plane',
-        body: 'Simpler to run. One single unified platform for deployments, gateways, and full observability.',
-      },
-      {
-        title: 'Usage 30 Days',
-        body: 'Visible from day one. Every request logged. Every decision tracked. Debug issues before users notice.',
-      },
+  pt: {
+    langLabel: 'PT',
+    brand: 'Alfa Produções',
+    nav: [
+      { label: 'Home', href: '#home' },
+      { label: 'Serviços', href: '#servicos' },
+      { label: 'Portfólio', href: '#portfolio' },
+      { label: 'Mentorias', href: '#mentorias' },
     ],
+    cta: 'Fazer Briefing',
+    hero: {
+      titleBefore: 'Transformamos ideias em ',
+      titleHighlight: 'impacto digital',
+      titleAfter: '.',
+      subtitle:
+        'Conteúdo, branding e estratégia para marcas que querem ser lembradas. Da captação à entrega, cuidamos de cada frame da sua história.',
+      primary: 'Fazer Briefing',
+      secondary: 'Ver Portfólio',
+    },
+    bento: {
+      eyebrow: 'Soluções',
+      title: 'Tudo que a sua marca precisa, em um só lugar.',
+      lead: 'Quatro frentes integradas para tirar seu projeto do papel com consistência visual e resultado.',
+      cards: {
+        audiovisual: {
+          title: 'Produção Audiovisual & Storytelling',
+          body: 'Vídeos institucionais, campanhas e cobertura de eventos com roteiro estratégico e olhar cinematográfico.',
+        },
+        branding: {
+          title: 'Branding & Design Visual',
+          body: 'Identidade visual completa: logo, paleta, tipografia e diretrizes para uma marca coerente em todos os canais.',
+        },
+        social: {
+          title: 'Gestão de Redes Sociais & Tráfego',
+          body: 'Planejamento, conteúdo e mídia paga com análise contínua de engajamento e conversão.',
+        },
+        sites: {
+          title: 'Criação de Sites & Mentorias Corporativas',
+          body: 'Sites rápidos e responsivos, e mentorias práticas para equipes que querem dominar conteúdo e posicionamento digital.',
+        },
+      },
+    },
+    portfolio: {
+      eyebrow: 'Portfólio',
+      title: 'Marcas que confiam na Alfa.',
+    },
+    footer: {
+      columns: [
+        { title: 'Empresa', links: ['Sobre nós', 'Equipe', 'Carreiras', 'Contato'] },
+        { title: 'Serviços', links: ['Audiovisual', 'Branding', 'Redes Sociais', 'Sites'] },
+        { title: 'Contato', links: ['WhatsApp', 'E-mail', 'Instagram', 'YouTube'] },
+        { title: 'Legal', links: ['Privacidade', 'Termos de uso', 'Cookies'] },
+      ],
+      copyright: '© 2026 Alfa Produções. Todos os direitos reservados.',
+      badge: 'SOC 2 Type II Certified',
+    },
   },
-  buildDeploy: {
-    id: 'build-deploy',
-    eyebrow: 'Build & Deploy',
-    title: 'Deploy in minutes. Roll back in seconds. Ship with confidence at any scale.',
-    lead: 'Infrastructure that moves with your code. Review changes in preview, then promote the exact version you tested.',
-    items: [
-      {
-        title: 'Connect a repo and push code',
-        body: 'Git-based deploys, zero setup. Link your Git repository once and deploy automatically on every push.',
-      },
-      {
-        title: 'Deploy Docker containers',
-        body: 'Any language, any framework. Run real containers that stay online, keeping the serverless feel.',
-      },
-      {
-        title: 'Previews for every commit',
-        body: 'Test every commit before it ships in a separate environment, then promote when ready.',
-      },
-      {
-        title: 'Ship immutable versions',
-        body: 'Instant rollbacks, no guesswork. Switch back instantly without redeploying.',
-      },
-      {
-        title: 'Validate releases automatically',
-        body: 'Branch protection & OpenAPI checks flag breaking changes before they hit production.',
-      },
+  en: {
+    langLabel: 'EN',
+    brand: 'Alfa Produções',
+    nav: [
+      { label: 'Home', href: '#home' },
+      { label: 'Services', href: '#servicos' },
+      { label: 'Portfolio', href: '#portfolio' },
+      { label: 'Mentorships', href: '#mentorias' },
     ],
-  },
-  gateway: {
-    id: 'gateway',
-    eyebrow: 'Gateway',
-    title: 'Protect and control traffic at the edge. Offload access control and rate limiting to global gateways.',
-    items: [
-      { title: 'Auth + Keys', body: 'Manage API keys end to end and control who can call what.' },
-      {
-        title: 'Global platform',
-        body: 'Edge gateway enforces access and routes requests to the closest instance for low latency.',
+    cta: 'Start a Briefing',
+    hero: {
+      titleBefore: 'We turn ideas into ',
+      titleHighlight: 'digital impact',
+      titleAfter: '.',
+      subtitle:
+        'Content, branding, and strategy for brands that want to be remembered. From capture to delivery, we craft every frame of your story.',
+      primary: 'Start a Briefing',
+      secondary: 'View Portfolio',
+    },
+    bento: {
+      eyebrow: 'Solutions',
+      title: 'Everything your brand needs, in one place.',
+      lead: 'Four integrated fronts to bring your project to life with visual consistency and results.',
+      cards: {
+        audiovisual: {
+          title: 'Video Production & Storytelling',
+          body: 'Institutional videos, campaigns, and event coverage with strategic scripts and a cinematic eye.',
+        },
+        branding: {
+          title: 'Branding & Visual Design',
+          body: 'Complete visual identity: logo, palette, typography, and guidelines for a coherent brand across channels.',
+        },
+        social: {
+          title: 'Social Media & Paid Traffic',
+          body: 'Planning, content, and paid media with continuous engagement and conversion analysis.',
+        },
+        sites: {
+          title: 'Websites & Corporate Mentorships',
+          body: 'Fast, responsive websites — and hands-on mentorships for teams mastering content and digital positioning.',
+        },
       },
-      {
-        title: 'Rate limits',
-        body: 'Set limits per IP, user, or key and enforce them close to your users.',
-      },
-      {
-        title: 'Validation',
-        body: 'Enforce request rules early to catch bad traffic before it hits your API.',
-      },
-      {
-        title: 'Analytics',
-        body: 'Access real-time insights into your API usage without custom instrumentation.',
-      },
-    ],
-  },
-  builtForProduction: {
-    id: 'built-for-production',
-    eyebrow: 'Built for production',
-    cards: [
-      {
-        title: 'High availability',
-        body: 'Multiple replicas in different availability zones so your app survives during outages.',
-      },
-      {
-        title: 'Proactive protection',
-        body: 'Take immediate control with the ability to instantly revoke access when threats appear.',
-      },
-    ],
-  },
-  scale: {
-    id: 'scale',
-    eyebrow: 'Scale',
-    title: 'Start small, scale to global traffic, and stay protected without managing infrastructure manually.',
-    lead: 'Platform that scales with you. Control, routing, and traffic handling are designed for multi-region from day one.',
-    cta: 'Read the docs',
-    items: [
-      { title: 'Multi-region routing', body: 'Route requests to the nearest region for consistently low latency.' },
-      { title: 'Automatic scaling', body: 'Capacity follows demand, with no knobs to babysit and no manual ops.' },
-      {
-        title: 'Predictable pricing',
-        body: 'Start free, then scale up when you are ready and keep billing predictable as you grow.',
-      },
-      {
-        title: 'Built-in protection',
-        body: 'Lock down access with API keys, edge rate limits, and instant revoke controls.',
-      },
-    ],
-  },
-  observe: {
-    id: 'observe',
-    eyebrow: 'Observe',
-    title: 'Stay in sync with your traffic in real time. Every request is logged. Every decision is visible.',
-    bullets: [
-      'Automatic logs and metrics collection for verifications, rate limits, audit logs, and HTTP traffic.',
-      'Spot spikes and unusual patterns — flag anomalies, errors, and performance issues.',
-      'Debug and explore in the dashboard. Filter by deployment, user, region, tags, and status.',
-      'Query via API from your own systems over verification and analytics data.',
-    ],
-    cta: 'Read the docs',
-  },
-  portal: {
-    id: 'portal',
-    eyebrow: 'AIO Developer Portal',
-    title: 'First-class developer experience for your users. API keys, usage, and docs—ready out of the box.',
-    items: [
-      { title: 'Zero code required', body: 'A fully hosted developer portal with nothing to build or maintain.' },
-      { title: 'Beautiful API docs', body: 'OpenAPI-generated documentation, hosted and always in sync.' },
-      { title: 'Keys and usage, self-serve', body: 'Users manage API keys and view usage without support requests.' },
-    ],
-  },
-  finalCta: {
-    title: 'Turn your API stack into one workflow. Start for free, integrate in minutes, and scale when you need to.',
-    cta: 'Start for free',
-  },
-  footer: {
-    columns: [
-      {
-        title: 'Product',
-        links: ['API Keys', 'Gateway', 'Deploy', 'Analytics'],
-      },
-      {
-        title: 'Resources',
-        links: ['Docs', 'Blog', 'Changelog', 'Status'],
-      },
-      {
-        title: 'Company',
-        links: ['About', 'Careers', 'Contact', 'Open source'],
-      },
-      {
-        title: 'Legal',
-        links: ['Privacy', 'Terms', 'Security'],
-      },
-    ],
-    note: 'Alfa · responsive landing base · HTML + Tailwind',
+    },
+    portfolio: {
+      eyebrow: 'Portfolio',
+      title: 'Brands that trust Alfa.',
+    },
+    footer: {
+      columns: [
+        { title: 'Company', links: ['About us', 'Team', 'Careers', 'Contact'] },
+        { title: 'Services', links: ['Video', 'Branding', 'Social Media', 'Websites'] },
+        { title: 'Contact', links: ['WhatsApp', 'Email', 'Instagram', 'YouTube'] },
+        { title: 'Legal', links: ['Privacy', 'Terms of use', 'Cookies'] },
+      ],
+      copyright: '© 2026 Alfa Produções. All rights reserved.',
+      badge: 'SOC 2 Type II Certified',
+    },
   },
 }
+
+export const clientLogos = [
+  'NOVA CAFÉ',
+  'URBANO FIT',
+  'CASA MADRE',
+  'VETTA LAW',
+  'PRISMA TECH',
+  'DOURO IMÓVEIS',
+  'LUME BEAUTY',
+  'ROTA 77',
+]
