@@ -27,10 +27,10 @@ export function renderHero(t) {
               ${t.hero.titleBefore}<span class="text-accent">${t.hero.titleHighlight}</span>${t.hero.titleAfter}
             </h1>
             <p class="mt-6 max-w-md text-base leading-relaxed text-muted md:text-lg">${t.hero.subtitle}</p>
-            <div class="mt-9 flex flex-col gap-3 md:flex-row md:gap-3" id="briefing">
-              ${primaryButton(t.hero.primary, '#briefing')}
-              ${secondaryButton(t.hero.secondary, '#portfolio')}
-            </div>
+          <div class="mt-9 flex flex-col gap-3 md:flex-row md:gap-3" id="briefing">
+            ${primaryButton(t.hero.primary, '/#contato')}
+            ${secondaryButton(t.hero.secondary, '/#servicos')}
+          </div>
           </div>
           <div class="fade-up order-1 flex flex-col gap-2 md:order-2 md:items-start md:pl-8" aria-hidden="true">
             ${wordRows}

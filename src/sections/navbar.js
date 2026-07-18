@@ -32,7 +32,7 @@ export function renderNavbar(t, theme) {
       <div class="mx-auto flex w-full max-w-6xl items-stretch gap-1 px-3 md:px-5">
         <!-- Segmento principal: logo + links (barra invertida, estilo Unkey) -->
         <div class="flex h-11 flex-1 items-center justify-between bg-bar pl-4 pr-2 text-barfg">
-          <a href="#home" class="flex min-h-11 items-center gap-2.5">
+          <a href="/" class="flex min-h-11 items-center gap-2.5">
             <span class="flex h-6 w-6 items-center justify-center rounded-[4px] bg-accent font-mono text-[11px] font-bold text-white">A</span>
             <span class="font-display text-[0.9375rem] font-bold tracking-tight text-barfg">${t.brand}</span>
           </a>
@@ -55,7 +55,7 @@ export function renderNavbar(t, theme) {
         </button>
 
         <!-- CTA: caixa na cor da página com borda (padrão "Sign Up") -->
-        <a href="#briefing" class="hidden h-11 items-center border border-bar bg-bg px-5 text-[0.8125rem] font-medium tracking-tight text-fg transition hover:bg-surface md:inline-flex">${t.cta}</a>
+        <a href="/#contato" class="hidden h-11 items-center border border-bar bg-bg px-5 text-[0.8125rem] font-medium tracking-tight text-fg transition hover:bg-surface md:inline-flex">${t.cta}</a>
 
         <!-- Hamburger mobile -->
         <button id="menu-open" type="button" aria-label="Abrir menu" aria-expanded="false"
@@ -96,7 +96,7 @@ export function renderNavbar(t, theme) {
             ${theme === 'dark' ? sunIcon : moonIcon}
           </button>
         </div>
-        <a href="#briefing" data-nav-link class="mt-3 inline-flex h-12 items-center justify-center bg-barfg text-sm font-medium tracking-tight text-bar">${t.cta}</a>
+        <a href="/#contato" data-nav-link class="mt-3 inline-flex h-12 items-center justify-center bg-barfg text-sm font-medium tracking-tight text-bar">${t.cta}</a>
       </nav>
     </div>
   `

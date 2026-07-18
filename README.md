@@ -2,7 +2,7 @@
 
 Landing page institucional da **Alfa Produções** com estética Unkey (zinc-950, acento azul), construída com **HTML + CSS + Tailwind** (Vite apenas para build/dev). Sem backend.
 
-5 seções: Navbar (toggle PT/EN no globo), Hero, Bento Grid, Portfólio, Footer. Bilíngue PT-BR/EN.
+Hub (`/`) + páginas `/studio` e `/fotos`. Bilíngue PT-BR/EN, tema claro/escuro. Contato WhatsApp e Instagrams no footer.
 
 ## Develop
 
@@ -31,6 +31,15 @@ firebase deploy --only hosting:tailwind
 
 Public URL: https://alfa-tailwind.web.app
 
-## Branch
+## Instagram content (local)
 
-Work on `dev`. Small commits per section.
+```bash
+# 1ª vez: abre o Chrome, faça login no Instagram e pressione Enter no terminal
+python3 scripts/fetch_instagram.py --headed
+
+# Depois (sessão já salva em ~/dev/github/.secrets/ig-playwright-profile/)
+python3 scripts/fetch_instagram.py
+```
+
+A sessão e o JSON bruto ficam **fora do Git** (`.secrets/`). Só o conteúdo público pode ir para `src/data/instagram.json`.
+
