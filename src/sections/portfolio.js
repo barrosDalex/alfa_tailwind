@@ -1,20 +1,20 @@
-import { container, eyebrow } from '../components/ui.js'
+import { container, monoLabel } from '../components/ui.js'
 import { clientLogos } from '../data/copy.js'
 
 export function renderPortfolio(t) {
   return `
-    <section id="portfolio" class="border-y border-zinc-800/50 bg-zinc-900/20 py-20 md:py-24">
+    <section id="portfolio" class="border-t border-border bg-surface2 py-16 md:py-24">
       ${container(`
-        <div class="fade-up text-center">
-          ${eyebrow(t.portfolio.eyebrow)}
-          <h2 class="mt-3 text-3xl font-extrabold tracking-tight text-zinc-50 md:text-4xl">${t.portfolio.title}</h2>
+        <div class="fade-up">
+          ${monoLabel(t.portfolio.eyebrow)}
+          <h2 class="mt-4 font-display text-3xl font-semibold tracking-tight text-fg md:text-4xl">${t.portfolio.title}</h2>
         </div>
-        <div class="fade-up mt-12 grid grid-cols-2 gap-4 md:grid-cols-4">
+        <div class="fade-up mt-12 grid grid-cols-2 md:grid-cols-4">
           ${clientLogos
             .map(
               (name) => `
-                <div class="flex min-h-20 items-center justify-center rounded-xl border border-zinc-800/50 bg-zinc-900/40 px-4 grayscale opacity-40 backdrop-blur-md transition hover:opacity-80">
-                  <span class="text-sm font-extrabold tracking-[0.15em] text-zinc-300">${name}</span>
+                <div class="flex min-h-20 items-center justify-center border border-border px-4 opacity-45 grayscale transition duration-200 hover:opacity-90 hover:grayscale-0 -ml-px -mt-px">
+                  <span class="font-mono text-xs font-medium tracking-[0.18em] text-fg">${name}</span>
                 </div>`,
             )
             .join('')}
